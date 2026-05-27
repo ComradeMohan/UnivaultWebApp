@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 180 30% 98.5%; /* Soft light teal-mist: #f5fafb */
+    --foreground: 195 45% 10%; /* Deep teal-slate text */
+
+    --card: 180 30% 98.5%;
+    --card-foreground: 195 45% 10%;
+ 
+    --popover: 180 30% 98.5%;
+    --popover-foreground: 195 45% 10%;
+ 
+    --primary: 185 95% 32%; /* Rich teal/cyan matching landing page */
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 185 20% 94%;
+    --secondary-foreground: 195 45% 10%;
+ 
+    --muted: 185 20% 94%;
+    --muted-foreground: 190 20% 40%;
+ 
+    --accent: 180 100% 40%;
+    --accent-foreground: 195 45% 10%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 185 20% 88%;
+    --input: 185 20% 88%;
+    --ring: 185 95% 32%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 215 65% 5.5%; /* Abyssal Teal Obsidian: #030a16 */
+    --foreground: 185 50% 94%; /* Ice-cyan soft white text */
+ 
+    --card: 215 65% 5.5%;
+    --card-foreground: 185 50% 94%;
+ 
+    --popover: 215 65% 5.5%;
+    --popover-foreground: 185 50% 94%;
+ 
+    --primary: 180 100% 48%; /* Electric Cyan accent */
+    --primary-foreground: 215 65% 5.5%;
+ 
+    --secondary: 215 40% 12%;
+    --secondary-foreground: 185 50% 94%;
+ 
+    --muted: 215 40% 12%;
+    --muted-foreground: 185 20% 65%;
+ 
+    --accent: 180 100% 48%;
+    --accent-foreground: 215 65% 5.5%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 215 40% 16%;
+    --input: 215 40% 16%;
+    --ring: 180 100% 50%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    background-image: 
+      radial-gradient(circle at top right, rgba(106, 178, 255, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at bottom left, rgba(0, 188, 211, 0.06) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+  .dark body {
+    background-color: #030a16;
+    background-image: 
+      radial-gradient(circle at top right, rgba(106, 178, 255, 0.15) 0%, transparent 45%),
+      radial-gradient(circle at bottom left, rgba(0, 188, 211, 0.15) 0%, transparent 45%);
+    background-attachment: fixed;
+    color: #e2f4f7;
+  }
+}
+
+/* Luminous Obsidian Theme custom styles registered in @layer utilities */
+@layer utilities {
+  .liquid-gradient {
+    background: linear-gradient(135deg, #6ab2ff, #00bcd3);
+  }
+
+  .liquid-text {
+    background: linear-gradient(135deg, #6ab2ff, #00bcd3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-panel {
+    background-color: rgba(6, 14, 32, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.05);
+  }
+
+  .glow-active {
+    box-shadow: 0 0 20px 0 rgba(106, 178, 255, 0.25);
+  }
+
+  .bg-obsidian-mesh {
+    background-color: #060e20;
+    background-image: 
+      radial-gradient(circle at top right, rgba(106, 178, 255, 0.12) 0%, transparent 45%),
+      radial-gradient(circle at bottom left, rgba(0, 188, 211, 0.12) 0%, transparent 45%);
+  }
+}
+
