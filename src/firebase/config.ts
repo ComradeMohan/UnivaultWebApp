@@ -1,10 +1,10 @@
 
 export const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FB_KEY,
-  authDomain: import.meta.env.VITE_FB_AUTH,
-  projectId: import.meta.env.VITE_FB_PID,
-  storageBucket: import.meta.env.VITE_FB_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FB_SENDER,
-  appId: import.meta.env.VITE_FB_APP,
-  measurementId: import.meta.env.VITE_FB_MEASURE,
+  apiKey: process.env.NEXT_PUBLIC_FB_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FB_AUTH,
+  projectId: process.env.NEXT_PUBLIC_FB_PID,
+  storageBucket: process.env.NEXT_PUBLIC_FB_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FB_SENDER,
+  appId: process.env.NEXT_PUBLIC_FB_APP,
+  measurementId: process.env.NEXT_PUBLIC_FB_MEASURE,
 };
