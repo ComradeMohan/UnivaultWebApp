@@ -2,7 +2,7 @@
 // The Firebase configuration will be populated during the build process.
 export const firebaseConfig = {
     apiKey: "AIzaSyBlQOn20GjVRP1WGZQM0_kAuyWDk6iiPp8",
-    authDomain: "auth.univault.live",
+    authDomain: "testing-5cd2f.firebaseapp.com",
     projectId: "testing-5cd2f",
     storageBucket: "testing-5cd2f.firebasestorage.app",
     messagingSenderId: "276756301302",
